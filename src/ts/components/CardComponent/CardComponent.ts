@@ -22,7 +22,7 @@ export class CardComponent extends Component implements CardComponentStructure {
        <span class="pokemon-card__type">${this.pokemon.types.name}</span>
      </div>
      <div class="pokemon-card__image-container">
-       <img class="pokemon-card__image" src="${this.pokemon.sprites.front_default}">
+       <img class="pokemon-card__image" src="${this.pokemon.sprites.dream_world.front_default}">
      </div>
   </a>
     `;

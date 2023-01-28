@@ -12,8 +12,10 @@ const bulbasaur: Pokemon = {
   pokemonName: "bulbasaur",
   types: { name: "grass" },
   sprites: {
-    front_default:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    dream_world: {
+      front_default:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+    },
   },
 };
 
