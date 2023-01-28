@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild-js": "rimraf public/js",
+    "prebuild-css": "rimraf public/css",
     "build-js": "tsc",
+    "build-css": "sass src/sass/styles.scss ./public/css/styles.css",
     "build-js:dev": "npm run build-js -- -w",
     "test": "jest",
     "test:dev": "npm test -- --watchAll",
@@ -28,6 +31,8 @@
     "jsdom": "^21.1.0",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
+    "rimraf": "^4.1.2",
+    "sass": "^1.57.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
   }
