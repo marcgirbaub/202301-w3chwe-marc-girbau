@@ -1,7 +1,12 @@
 @use "../variables/colors/colors";
+@use "../variables/typography/typography";
 
 .app {
   padding: 1em 1.25em;
+}
+
+body {
+  font-family: typography.$main-font-family;
 }
 
 .bug {

@@ -16,13 +16,14 @@ export class CardComponent extends Component implements CardComponentStructure {
 
     this.element.innerHTML = `
     <a>
-     <div>
+     <div class="pokemon-card__info">
        <span class="pokemon-card__name">${this.pokemon.pokemonName}</span>
-       <span class="pokemon-card__id">${this.pokemon.id}</span>
+       <span class="pokemon-card__id">#${this.pokemon.id}</span>
        <span class="pokemon-card__type">${this.pokemon.types.name}</span>
      </div>
-     <img class="pokemon-card__image" src="${this.pokemon.sprites.front_default}">
-
+     <div class="pokemon-card__image-container">
+       <img class="pokemon-card__image" src="${this.pokemon.sprites.front_default}">
+     </div>
   </a>
     `;
   }

@@ -1,2 +1,65 @@
 @use "../../variables/colors/colors";
 @use "../../variables/typography/typography";
+
+.pokemon-card {
+  width: 48.8%;
+  height: 125px;
+  max-width: 300px;
+  border-radius: 1em;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1em 0.75em;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25em;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  &__name {
+    font-weight: typography.$pokemon-card-name-font-weight;
+    font-size: typography.$pokemon-card-name-font-size;
+  }
+
+  &__number {
+    font-size: typography.$normal-font-size;
+  }
+
+  &__type {
+    font-size: 0.85rem;
+    margin-right: 90px;
+    width: 60px;
+    padding: 3.75px 0 0 0;
+    background-color: rgba(215, 211, 211, 0.3);
+    text-align: center;
+    border-radius: 1em;
+  }
+
+  &__image-container {
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+    width: 6em;
+    height: 6em;
+
+    img {
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
