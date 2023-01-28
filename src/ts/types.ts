@@ -1,17 +1,10 @@
 export interface Type {
-  name: string;
-}
-
-export interface DreamWorld {
-  front_default: string;
-}
-export interface Other {
-  dream_world: DreamWorld;
+  type: { name: string };
 }
 
 export interface Pokemon {
   id: number;
-  pokemonName: string;
-  types: Type;
-  sprites: Other;
+  name: string;
+  types: Type[];
+  sprites: { other: { dream_world: { front_default: string } } };
 }

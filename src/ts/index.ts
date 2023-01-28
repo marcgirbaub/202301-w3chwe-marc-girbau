@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import { CardComponent } from "./components/CardComponent/CardComponent.js";
 import { PageComponent } from "./components/PageComponent/PageComponent.js";
 import type { Pokemon } from "./types.js";
@@ -7,17 +6,9 @@ import { getPokemons } from "./utils/getPokemons/getPokemons.js";
 const page = new PageComponent("Pokedex");
 page.render();
 
-const bulbasaur: Pokemon = {
-  id: 1,
-  pokemonName: "bulbasaur",
-  types: { name: "grass" },
-  sprites: {
-    dream_world: {
-      front_default:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
-    },
-  },
-};
+(async () => {
+  const pokemons = await getPokemons(150);
 
-const pokemonbulbasaur = new CardComponent(page.element, bulbasaur);
-pokemonbulbasaur.render();
+  const pokemonbulbasaur = new CardComponent(page.element, pokemons[3]);
+  pokemonbulbasaur.render();
+})();
