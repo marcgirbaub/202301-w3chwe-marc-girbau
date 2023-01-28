@@ -11,3 +11,18 @@ body {
 h1 {
   margin: 0;
 }
+
+a,
+a::after,
+a::before,
+a:visited,
+a:focus {
+  color: black;
+  background-color: #fff;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}

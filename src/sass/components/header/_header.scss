@@ -1,0 +1,52 @@
+@use "../../variables/typography/typography";
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  &__searchbar {
+    height: 3em;
+    width: 100%;
+    border-radius: 1.75em;
+    border: none;
+    padding: 0.75em 1.5em;
+    background-color: rgb(240, 239, 239);
+    color: grey;
+    max-width: 30em;
+    box-shadow: 2px 2px rgb(206, 205, 205, 0.6);
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-family: typography.$title-font-family;
+    font-weight: typography.$title-font-weight;
+    font-size: typography.$title-font-size;
+  }
+
+  &__image {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__favourite {
+    font-family: typography.$title-font-family;
+    font-size: typography.$pokemon-card-name-font-size;
+    font-weight: typography.$primary-font-weight;
+    border-radius: 1.75em;
+    background-color: rgb(249, 234, 23);
+    padding: 1rem;
+  }
+}

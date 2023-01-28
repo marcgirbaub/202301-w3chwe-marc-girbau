@@ -1,4 +1,5 @@
 @use "reset/reset";
 @use "variables/colors/colors";
 @use "variables/typography/typography";
-@import url("../../node_modules/bootstrap/dist/css/bootstrap.min.css");
+@use "components/header/header";
+@use "global/globals";
