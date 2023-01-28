@@ -3,7 +3,7 @@
 .main-header {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.75em;
 
   &__searchbar {
     height: 3em;
@@ -43,10 +43,10 @@
 
   &__favourite {
     font-family: typography.$title-font-family;
-    font-size: typography.$pokemon-card-name-font-size;
+    font-size: 1rem;
     font-weight: typography.$primary-font-weight;
     border-radius: 1.75em;
     background-color: rgb(249, 234, 23);
-    padding: 1rem;
+    padding: 0.5rem;
   }
 }
