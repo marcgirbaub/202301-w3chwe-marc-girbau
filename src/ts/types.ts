@@ -8,7 +8,7 @@ export interface Sprites {
 
 export interface Pokemon {
   id: number;
-  name: string;
-  types: Type[];
+  pokemonName: string;
+  types: Type;
   sprites: Sprites;
 }
