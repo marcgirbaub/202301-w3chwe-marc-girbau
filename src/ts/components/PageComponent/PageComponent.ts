@@ -1,8 +1,10 @@
+import type { Pokemon } from "../../types.js";
+import { CardListComponent } from "../CardListComponent/CardListComponent.js";
 import { Component } from "../Component/Component.js";
 
 export class PageComponent extends Component {
-  constructor(public title: string) {
-    super("div", document.body, "app container");
+  constructor(public title: string, public pokemons: Pokemon[]) {
+    super("div", document.body, "app");
 
     this.title = title;
   }
@@ -19,12 +21,14 @@ export class PageComponent extends Component {
       <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar">
       <div class="main-header__links link">
         <a class="link__favourite">My Pokemons</a>
-        <div class="link__buttons buttons">
-          <button class="buttons__back"></button>
-          <button class="buttons__forward"></button>
-        </div>
+       
       </div>
     </header>
+    <main class="container"></main>
     `;
+
+    const listContainer = this.element.querySelector(".container");
+    const listOfPokemons = new CardListComponent(listContainer, this.pokemons);
+    listOfPokemons.render();
   }
 }

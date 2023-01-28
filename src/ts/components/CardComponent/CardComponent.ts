@@ -7,9 +7,9 @@ export class CardComponent extends Component implements CardComponentStructure {
 
   constructor(parentElement: Element, pokemon: Pokemon) {
     super(
-      "li",
+      "article",
       parentElement,
-      `li card pokemon-card ${pokemon.types[0].type.name}`
+      `card pokemon-card ${pokemon.types[0].type.name}`
     );
 
     this.pokemon = pokemon;
