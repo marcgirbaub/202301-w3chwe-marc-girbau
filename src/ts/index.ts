@@ -9,6 +9,8 @@ page.render();
 (async () => {
   const pokemons = await getPokemons(150);
 
-  const pokemonbulbasaur = new CardComponent(page.element, pokemons[3]);
-  pokemonbulbasaur.render();
+  pokemons.forEach((pokemon) => {
+    const pokemonCard = new CardComponent(page.element, pokemon);
+    pokemonCard.render();
+  });
 })();
