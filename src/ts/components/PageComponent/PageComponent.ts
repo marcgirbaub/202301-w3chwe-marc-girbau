@@ -3,7 +3,12 @@ import { CardListComponent } from "../CardListComponent/CardListComponent.js";
 import { Component } from "../Component/Component.js";
 
 export class PageComponent extends Component {
-  constructor(public title: string, public pokemons: Pokemon[]) {
+  constructor(
+    public title: string,
+    public pokemons: Pokemon[],
+    private readonly firstPosiiton: number,
+    private readonly lastPosition: number
+  ) {
     super("div", document.body, "app");
 
     this.title = title;
@@ -28,7 +33,10 @@ export class PageComponent extends Component {
     `;
 
     const listContainer = this.element.querySelector(".container");
-    const listOfPokemons = new CardListComponent(listContainer, this.pokemons);
+    const listOfPokemons = new CardListComponent(
+      listContainer,
+      this.pokemons.slice(this.firstPosiiton, this.lastPosition)
+    );
     listOfPokemons.render();
   }
 }

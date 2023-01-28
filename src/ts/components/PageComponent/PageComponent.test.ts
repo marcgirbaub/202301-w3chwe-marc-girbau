@@ -22,7 +22,7 @@ describe("Given the PageComponent class", () => {
         },
       ];
       const bodyElement = document.body;
-      const pageElement = new PageComponent(title, pokemons);
+      const pageElement = new PageComponent(title, pokemons, 0, 1);
       pageElement.render();
       const expectedTitle = "Pokedex";
 
