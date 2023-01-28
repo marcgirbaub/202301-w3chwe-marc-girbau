@@ -28,8 +28,12 @@ export class PageComponent extends Component {
       <div class="main-header__links link">
         <a class="link__favourite">My Pokemons</a>
         <div class="link__buttons buttons">
-          <button class="buttons__back"></button>
-          <button class="buttons__forward"></button>
+          <button class="buttons__back">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+          <button class="buttons__forward">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
         </div>
       </div>
     </header>
