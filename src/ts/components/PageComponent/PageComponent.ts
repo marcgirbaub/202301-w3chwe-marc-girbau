@@ -49,15 +49,17 @@ export class PageComponent extends Component {
 
     const forwardButton = this.element.querySelector(".buttons__forward");
     forwardButton.addEventListener("click", () => {
-      this.firstPositon += 10;
-      this.lastPosition += 10;
-      listContainer.innerHTML = "";
+      if (this.firstPositon < 150) {
+        this.firstPositon += 10;
+        this.lastPosition += 10;
+        listContainer.innerHTML = "";
 
-      const listOfPokemons = new CardListComponent(
-        listContainer,
-        this.pokemons.slice(this.firstPositon, this.lastPosition)
-      );
-      listOfPokemons.render();
+        const listOfPokemons = new CardListComponent(
+          listContainer,
+          this.pokemons.slice(this.firstPositon, this.lastPosition)
+        );
+        listOfPokemons.render();
+      }
     });
 
     const backButton = this.element.querySelector(".buttons__back");
