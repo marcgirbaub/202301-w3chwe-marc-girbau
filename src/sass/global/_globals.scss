@@ -1,3 +1,82 @@
+@use "../variables/colors/colors";
+@use "../variables/typography/typography";
+
 .app {
   padding: 1em 1.25em;
+}
+
+body {
+  font-family: typography.$main-font-family;
+}
+
+.bug {
+  background-color: colors.$bug-type-color;
+}
+
+.dragon {
+  background-color: colors.$dragon-type-color;
+}
+
+.electric {
+  background-color: colors.$electric-type-color;
+}
+
+.fighting {
+  background-color: colors.$fighting-type-color;
+}
+
+.fire {
+  background-color: colors.$fire-type-color;
+}
+
+.flying {
+  background-color: colors.$flying-type-color;
+}
+
+.ghost {
+  background-color: colors.$ghost-type-color;
+}
+
+.grass {
+  background-color: colors.$grass-type-color;
+}
+
+.ground {
+  background-color: colors.$ground-type-color;
+}
+
+.ice {
+  background-color: colors.$ice-type-color;
+}
+
+.normal {
+  background-color: colors.$normal-type-color;
+}
+
+.poison {
+  background-color: colors.$poison-type-color;
+}
+
+.psychic {
+  background-color: colors.$psychic-type-color;
+}
+
+.rock {
+  background-color: colors.$rock-type-color;
+}
+
+.water {
+  background-color: colors.$water-type-color;
+}
+
+.fairy {
+  background-color: colors.$fairy-type-color;
+}
+
+.steel {
+  background-color: colors.$steel-type-color;
+}
+
+.dark {
+  background-color: colors.$dark-type-color;
 }
