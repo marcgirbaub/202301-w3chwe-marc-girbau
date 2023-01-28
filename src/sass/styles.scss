@@ -1,4 +1,5 @@
-@import url(../../node_modules/bootstrap/scss/bootstrap.scss);
 @use "reset/reset";
 @use "variables/colors/colors";
 @use "variables/typography/typography";
+@use "components/header/header";
+@use "global/globals";
