@@ -8,7 +8,7 @@
     "prebuild-css": "rimraf public/css",
     "build-js": "tsc",
     "build-css": "sass src/sass/styles.scss ./public/css/styles.css",
-    "build-css:dev": "npm run build-css -- -w",
+    "build-css:dev": "sass src/sass/styles.scss ./public/css/styles.css --watch",
     "build-js:dev": "npm run build-js -- -w",
     "test": "jest",
     "test:dev": "npm test -- --watchAll",

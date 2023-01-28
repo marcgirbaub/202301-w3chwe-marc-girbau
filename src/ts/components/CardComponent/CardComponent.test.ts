@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+// /* eslint-disable @typescript-eslint/naming-convention */
 import type { Pokemon } from "../../types.js";
 import { CardComponent } from "./CardComponent.js";
 
@@ -7,17 +8,19 @@ describe("Given the CardComponent class", () => {
     test("Then it should contain the name of 'bulbasaur'", () => {
       const bulbasaur: Pokemon = {
         id: 1,
-        pokemonName: "bulbasaur",
-        types: { name: "grass" },
+        name: "bulbasaur",
+        types: [{ type: { name: "grass" } }],
         sprites: {
-          dream_world: {
-            front_default:
-              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+          other: {
+            dream_world: {
+              front_default:
+                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+            },
           },
         },
       };
       const container = document.createElement("div");
-      const expectedName = bulbasaur.pokemonName;
+      const expectedName = bulbasaur.name;
 
       const bulbasaurCard = new CardComponent(container, bulbasaur);
       bulbasaurCard.render();
