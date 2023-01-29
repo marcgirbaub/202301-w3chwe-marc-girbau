@@ -12,7 +12,7 @@ export const startApp = async () => {
 
   pokemons = pokemonsFromApi;
 
-  const page = new PageComponent("Pokedex", pokemonsFromApi);
+  const page = new PageComponent("Pokemon", pokemonsFromApi);
   page.render();
 };
 

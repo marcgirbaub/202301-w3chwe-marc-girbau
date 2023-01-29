@@ -19,7 +19,7 @@ export class CardComponent extends Component implements CardComponentStructure {
     super.render();
 
     this.element.innerHTML = `
-    <a>
+    <button class="pokemon-button">
       <div class="pokemon-card__info">
         <span class="pokemon-card__name">${this.pokemon.name}</span>
         <span class="pokemon-card__id">#${this.pokemon.id}</span>
@@ -28,7 +28,7 @@ export class CardComponent extends Component implements CardComponentStructure {
       <div class="pokemon-card__image-container">
         <img class="pokemon-card__image" src="${this.pokemon.sprites.other.dream_world.front_default}">
       </div>
-    </a>
+    </button>
     `;
   }
 }

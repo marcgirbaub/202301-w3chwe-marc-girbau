@@ -71,8 +71,22 @@
     font-size: 1rem;
     font-weight: typography.$primary-font-weight;
     border-radius: 1.75em;
-    background-color: rgb(249, 234, 23);
-    padding: 0.5rem;
+    background-color: rgb(222, 87, 74);
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+
+    &:hover {
+      opacity: 0.9;
+      border: 1px solid black;
+    }
+
+    img {
+      height: 30px;
+      width: 125px;
+      object-fit: contain;
+    }
   }
 }
 
