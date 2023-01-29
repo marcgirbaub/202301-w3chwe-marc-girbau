@@ -26,7 +26,7 @@ export class PageComponent extends Component {
       </div>
       <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar hidden">
       <div class="main-header__links link">
-        <a class="link__favourite">My Pokemons</a>
+        <a class="link__favourite">My Pokemon</a>
         <div class="link__buttons buttons">
           <button class="buttons__back">
             <span class="material-symbols-outlined">arrow_back</span>

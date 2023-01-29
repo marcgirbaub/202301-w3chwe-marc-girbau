@@ -76,10 +76,12 @@
   }
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 750px) {
   .main-header {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 
   .title {
