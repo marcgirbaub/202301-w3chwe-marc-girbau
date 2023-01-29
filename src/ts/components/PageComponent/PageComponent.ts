@@ -44,7 +44,7 @@ export class PageComponent extends Component {
     this.addEventListeners();
   }
 
-  private addEventListeners() {
+  public addEventListeners() {
     const listContainer = this.element.querySelector(".container");
     const listOfPokemons = new CardListComponent(
       listContainer,

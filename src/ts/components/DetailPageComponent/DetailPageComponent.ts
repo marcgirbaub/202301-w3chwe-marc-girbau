@@ -22,7 +22,7 @@ export class DetailPageComponent extends Component {
       <li class="list-group-item">Type: ${this.pokemon.types[0].type.name}</li>
       <li class="list-group-item">Height: ${this.pokemon.height}</li>
       <li class="list-group-item">Weight: ${this.pokemon.weight}</li>
-      <li class="list-group-item">Base experience: ${this.pokemon.base_experience}</li>
+      <li class="list-group-item base">Base experience: ${this.pokemon.base_experience}</li>
       <li class="list-group-item">Order: ${this.pokemon.order}</li>
     </ul>
     </div>`;
