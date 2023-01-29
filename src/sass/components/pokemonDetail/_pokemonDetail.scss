@@ -40,5 +40,14 @@
 .fav-button {
   position: absolute;
   z-index: 1;
-  top: 0;
+  top: 18%;
+  right: 12%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgb(56, 56, 56);
+  background-color: #f8d030;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

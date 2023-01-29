@@ -12,7 +12,7 @@ export class DetailPageComponent extends Component {
     super.render();
 
     this.element.innerHTML = `
-    <button class="fav-button">Add favourites</button>
+    <button class="fav-button">Add to Pokedex</button>
     <button class="back-button material-symbols-outlined">undo</button>
     <div class="card detail">
       <img src="${this.pokemon.sprites.other.dream_world.front_default}" class="card-image" alt="${this.pokemon.name}">
