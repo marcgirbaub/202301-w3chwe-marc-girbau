@@ -9,7 +9,7 @@ export class PageComponent extends Component {
     public title: string,
     public pokemons: Pokemon[],
     private firstPositon = 0,
-    private lastPosition = 10
+    private lastPosition = 12
   ) {
     super("div", document.body, "app");
 
@@ -55,9 +55,9 @@ export class PageComponent extends Component {
 
     const forwardButton = this.element.querySelector(".buttons__forward");
     forwardButton.addEventListener("click", () => {
-      if (this.firstPositon < 150) {
-        this.firstPositon += 10;
-        this.lastPosition += 10;
+      if (this.lastPosition < 151) {
+        this.firstPositon += 12;
+        this.lastPosition += 12;
         listContainer.innerHTML = "";
 
         const listOfPokemons = new CardListComponent(
@@ -74,8 +74,8 @@ export class PageComponent extends Component {
     const backButton = this.element.querySelector(".buttons__back");
     backButton.addEventListener("click", () => {
       if (this.firstPositon !== 0) {
-        this.firstPositon -= 10;
-        this.lastPosition -= 10;
+        this.firstPositon -= 12;
+        this.lastPosition -= 12;
         listContainer.innerHTML = "";
 
         const listOfPokemons = new CardListComponent(
