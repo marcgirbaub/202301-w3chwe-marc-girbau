@@ -15,6 +15,7 @@ export class FavouriteCardComponent extends Component {
 
     this.element.innerHTML = `
       <div class="favourite-pokemon__container">
+        <img class="star" src="../../../img/favourite-star.png">
         <img class="favourite-pokemon__image" src="${this.pokemon.sprites.other.dream_world.front_default}">
       </div>
     `;
