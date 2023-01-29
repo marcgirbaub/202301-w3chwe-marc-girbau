@@ -13,7 +13,7 @@ export class DetailPageComponent extends Component {
     this.element.innerHTML = `
     <button class="back-button material-symbols-outlined">undo</button>
     <div class="card detail">
-      <img src="${this.pokemon.sprites.other.dream_world.front_default}" class="card-img-top" alt="...">
+      <img src="${this.pokemon.sprites.other.dream_world.front_default}" class="card-image" alt="${this.pokemon.name}">
       <div class="card-body">
         <h5 class="card-title">${this.pokemon.name}</h5>
     </div>
