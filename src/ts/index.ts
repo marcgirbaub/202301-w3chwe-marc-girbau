@@ -6,6 +6,8 @@ import { getPokemons } from "./utils/getPokemons/getPokemons.js";
 let pokemons = [];
 
 export const startApp = async () => {
+  document.body.innerHTML = "";
+
   const pokemonsFromApi = await getPokemons(150);
 
   pokemons = pokemonsFromApi;

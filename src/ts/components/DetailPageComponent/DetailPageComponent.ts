@@ -1,16 +1,18 @@
+import { startApp } from "../../index.js";
 import type { Pokemon } from "../../types.js";
 import { Component } from "../Component/Component.js";
 
 export class DetailPageComponent extends Component {
   constructor(parentElement: Element, public pokemon: Pokemon) {
-    super("div", parentElement, "card");
+    super("div", parentElement, "card-container");
   }
 
   render() {
     super.render();
 
     this.element.innerHTML = `
-    <div class="card" style="width: 18rem;">
+    <button class="back-button material-symbols-outlined">undo</button>
+    <div class="card detail">
       <img src="${this.pokemon.sprites.other.dream_world.front_default}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${this.pokemon.name}</h5>

@@ -2,6 +2,7 @@ import { startApp } from "../../index.js";
 import type { Pokemon } from "../../types.js";
 import { CardListComponent } from "../CardListComponent/CardListComponent.js";
 import { Component } from "../Component/Component.js";
+import { DetailPageComponent } from "../DetailPageComponent/DetailPageComponent.js";
 
 export class PageComponent extends Component {
   constructor(
@@ -95,9 +96,39 @@ export class PageComponent extends Component {
     const listContainer = this.element.querySelector(".container");
     const pokemonButton = this.element.querySelectorAll(".pokemon-button")!;
 
-    pokemonButton.forEach((button) => {
+    pokemonButton.forEach((button, position) => {
       button.addEventListener("click", () => {
         listContainer.innerHTML = "";
+
+        position += this.firstPositon;
+
+        const detailPokemon = new DetailPageComponent(
+          listContainer,
+          this.pokemons[position]
+        );
+        detailPokemon.render();
+
+        const backToPageButton =
+          detailPokemon.element.querySelector(".back-button");
+
+        backToPageButton.addEventListener("click", async () => {
+          const listContainer = this.element.querySelector(".container");
+          detailPokemon.element.innerHTML = "";
+          listContainer.innerHTML = "";
+
+          const listOfPokemons = new CardListComponent(
+            listContainer,
+            this.pokemons.slice(this.firstPositon, this.lastPosition),
+            this.lastPosition
+          );
+
+          listOfPokemons.render();
+          this.element.innerHTML = "";
+          this.render();
+          this.renderPokemonDetail();
+
+          await startApp();
+        });
       });
     });
   }
