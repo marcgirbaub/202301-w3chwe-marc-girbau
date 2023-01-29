@@ -43,7 +43,8 @@ export class PageComponent extends Component {
     const listContainer = this.element.querySelector(".container");
     const listOfPokemons = new CardListComponent(
       listContainer,
-      this.pokemons.slice(this.firstPositon, this.lastPosition)
+      this.pokemons.slice(this.firstPositon, this.lastPosition),
+      this.lastPosition
     );
     listOfPokemons.render();
 
@@ -56,7 +57,8 @@ export class PageComponent extends Component {
 
         const listOfPokemons = new CardListComponent(
           listContainer,
-          this.pokemons.slice(this.firstPositon, this.lastPosition)
+          this.pokemons.slice(this.firstPositon, this.lastPosition),
+          this.lastPosition
         );
         listOfPokemons.render();
       }
@@ -71,7 +73,8 @@ export class PageComponent extends Component {
 
         const listOfPokemons = new CardListComponent(
           listContainer,
-          this.pokemons.slice(this.firstPositon, this.lastPosition)
+          this.pokemons.slice(this.firstPositon, this.lastPosition),
+          this.lastPosition
         );
         listOfPokemons.render();
       }
