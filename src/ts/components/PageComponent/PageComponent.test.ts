@@ -10,6 +10,10 @@ describe("Given the PageComponent class", () => {
         {
           id: 1,
           name: "bulbasaur",
+          height: 10,
+          weight: 20,
+          base_experience: 110,
+          order: 12,
           types: [{ type: { name: "grass" } }],
           sprites: {
             other: {

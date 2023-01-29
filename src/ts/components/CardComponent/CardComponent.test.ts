@@ -18,6 +18,10 @@ describe("Given the CardComponent class", () => {
             },
           },
         },
+        height: 10,
+        weight: 10,
+        base_experience: 10,
+        order: 10,
       };
       const container = document.createElement("div");
       const expectedName = bulbasaur.name;
