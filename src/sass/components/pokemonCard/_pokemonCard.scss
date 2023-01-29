@@ -6,7 +6,7 @@
   max-width: 250px;
   border-radius: 1em;
 
-  a {
+  button {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -26,6 +26,7 @@
     row-gap: 0.25em;
     background-color: transparent;
     color: #fff;
+    align-items: flex-start;
   }
 
   &__name {
@@ -49,6 +50,7 @@
 
   &__image-container {
     position: absolute;
+    display: flex;
     bottom: 4%;
     right: 4%;
     width: 5em;
