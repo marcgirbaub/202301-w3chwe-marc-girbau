@@ -9,7 +9,11 @@ export class CardListComponent
 {
   pokemons: Pokemon[];
 
-  constructor(parentElement: Element, pokemons: Pokemon[]) {
+  constructor(
+    parentElement: Element,
+    pokemons: Pokemon[],
+    public lastPokemon: number
+  ) {
     super("ul", parentElement, "row row-cols-2");
 
     this.pokemons = pokemons;
@@ -19,6 +23,7 @@ export class CardListComponent
     super.render();
 
     this.element.innerHTML = `
+    <span class="pokemon-counter">${this.lastPokemon} / 150</span>
       ${this.pokemons.map(() => `<li class="col"></li>`).join("")}`;
 
     this.element.querySelectorAll(".col").forEach((pokemonCard, position) => {

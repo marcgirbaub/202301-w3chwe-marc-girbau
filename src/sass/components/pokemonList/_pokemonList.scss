@@ -3,9 +3,18 @@
 }
 
 .row {
-  padding: 0.35rem 0.5rem;
+  padding: 2.5rem 0.5rem 0.5rem;
+  position: relative;
 }
 
 .col {
   padding: 0.2rem;
+}
+
+.pokemon-counter {
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  right: 7%;
+  font-weight: bold;
 }

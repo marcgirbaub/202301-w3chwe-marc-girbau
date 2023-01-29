@@ -24,7 +24,7 @@ export class PageComponent extends Component {
         <h1 class="title__title">${this.title}</h1>
         <img class="title__image" src="../../../img/pokeball_title.png">
       </div>
-      <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar">
+      <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar hidden">
       <div class="main-header__links link">
         <a class="link__favourite">My Pokemons</a>
         <div class="link__buttons buttons">
@@ -43,7 +43,8 @@ export class PageComponent extends Component {
     const listContainer = this.element.querySelector(".container");
     const listOfPokemons = new CardListComponent(
       listContainer,
-      this.pokemons.slice(this.firstPositon, this.lastPosition)
+      this.pokemons.slice(this.firstPositon, this.lastPosition),
+      this.lastPosition
     );
     listOfPokemons.render();
 
@@ -56,7 +57,8 @@ export class PageComponent extends Component {
 
         const listOfPokemons = new CardListComponent(
           listContainer,
-          this.pokemons.slice(this.firstPositon, this.lastPosition)
+          this.pokemons.slice(this.firstPositon, this.lastPosition),
+          this.lastPosition
         );
         listOfPokemons.render();
       }
@@ -71,7 +73,8 @@ export class PageComponent extends Component {
 
         const listOfPokemons = new CardListComponent(
           listContainer,
-          this.pokemons.slice(this.firstPositon, this.lastPosition)
+          this.pokemons.slice(this.firstPositon, this.lastPosition),
+          this.lastPosition
         );
         listOfPokemons.render();
       }
