@@ -29,6 +29,7 @@ export class PageComponent extends Component {
       <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar hidden">
       <div class="main-header__links link">
         <button class="link__favourite"><img src="../../../img/pokedex_logo.png" alt="pokemon logo"></button>
+        <button class="back-button-fav hidden material-symbols-outlined">undo</button>
         <div class="link__buttons buttons">
           <button class="buttons__back">
             <span class="material-symbols-outlined">arrow_back</span>
@@ -61,6 +62,7 @@ export class PageComponent extends Component {
       ).then(async (response) => response.json())) as Pokemon[];
 
       this.element.querySelector(".link__buttons").classList.add("hidden");
+      this.element.querySelector(".back-button-fav").classList.remove("hidden");
 
       this.firstPositon = 0;
       this.lastPosition = 12;
@@ -112,6 +114,13 @@ export class PageComponent extends Component {
       }
     });
 
+    const backFavouriteButton = this.element.querySelector(".back-button-fav");
+    backFavouriteButton.addEventListener("click", async () => {
+      this.element.querySelector(".container").innerHTML = "";
+
+      await startApp();
+    });
+
     this.renderPokemonDetail();
   }
 
@@ -122,6 +131,8 @@ export class PageComponent extends Component {
     pokemonButton.forEach((button, position) => {
       button.addEventListener("click", () => {
         listContainer.innerHTML = "";
+
+        this.element.querySelector(".link__buttons").classList.add("hidden");
 
         position += this.firstPositon;
 
