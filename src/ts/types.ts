@@ -12,3 +12,12 @@ export interface Pokemon {
   types: Type[];
   sprites: { other: { dream_world: { front_default: string } } };
 }
+
+export interface FavouritePokemon {
+  base_experience: number;
+  height: number;
+  id: number;
+  name: string;
+  order: number;
+  sprites: { other: { dream_world: { front_default: string } } };
+}

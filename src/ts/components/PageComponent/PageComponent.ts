@@ -3,6 +3,7 @@ import type { Pokemon } from "../../types.js";
 import { CardListComponent } from "../CardListComponent/CardListComponent.js";
 import { Component } from "../Component/Component.js";
 import { DetailPageComponent } from "../DetailPageComponent/DetailPageComponent.js";
+import { FavouriteCardList } from "../FavouriteCardList/FavouriteCardList.js";
 
 export class PageComponent extends Component {
   constructor(
@@ -27,7 +28,7 @@ export class PageComponent extends Component {
       </div>
       <input type="search" placeholder="🔍  What Pokemon are you looking for?" class="main-header__searchbar hidden">
       <div class="main-header__links link">
-        <a class="link__favourite"><img src="../../../img/pokedex_logo.png" alt="pokemon logo"></a>
+        <button class="link__favourite"><img src="../../../img/pokedex_logo.png" alt="pokemon logo"></button>
         <div class="link__buttons buttons">
           <button class="buttons__back">
             <span class="material-symbols-outlined">arrow_back</span>
@@ -52,6 +53,28 @@ export class PageComponent extends Component {
       this.lastPosition
     );
     listOfPokemons.render();
+
+    const myPokemonsButton = this.element.querySelector(".link__favourite");
+    myPokemonsButton.addEventListener("click", async () => {
+      const myPokemons = (await fetch(
+        "https://two02301-w3chwe-pokeapi-marc-girbau.onrender.com/pokemon/"
+      ).then(async (response) => response.json())) as Pokemon[];
+
+      this.element.querySelector(".link__buttons").classList.add("hidden");
+
+      this.firstPositon = 0;
+      this.lastPosition = 12;
+
+      listContainer.innerHTML = "";
+
+      const myPokemonsList = new FavouriteCardList(
+        listContainer,
+        myPokemons.slice(this.firstPositon, this.lastPosition),
+        this.lastPosition
+      );
+
+      myPokemonsList.render();
+    });
 
     const forwardButton = this.element.querySelector(".buttons__forward");
     forwardButton.addEventListener("click", () => {
